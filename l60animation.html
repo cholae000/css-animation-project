@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fontawesomepro/css/all.min.css">
+    <title>Icon Animation Effect</title>
+</head>
+<style type="text/css">
+    body{
+        height: 100vh;
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+
+        overflow: hidden;
+    }
+    ul{
+        list-style: none;
+        display: flex;
+
+        padding: 0;
+        margin: 0;
+    }
+    li{
+        width: 120px;
+        height: 120px;
+        border: 2px solid #0a3d62;
+        border-radius: 50%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin: 30px;
+
+        position: relative;
+    }
+    i{
+        font-size: 48px;
+        color: #0a3d62;
+    }
+    li::before{
+        content: '';
+        width: 100%;
+        height: 100%;
+        
+        background-color:#0a3d62 ;
+        border-radius: 50%;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        z-index: -1;
+
+        opacity: 0;
+    }
+    li:hover::before{
+        opacity: 1;
+        transform: scale(0.8);
+    }
+    li:hover i{
+        color: #fff;
+    }
+
+    li::after{
+        content: '';
+        width: 97%;
+        height: 97%;
+        border: 2px dotted #0a3d62;   
+        border-radius: 50%;  
+        
+        position: absolute;
+        top: 0px;
+        left: 0px;
+
+        opacity: 0;
+    }
+    li:hover::after{
+        opacity: 1;
+       
+
+        animation: myani 10s infinite linear;
+    }
+    @keyframes myani{
+        0%{
+            transform: scale(0.9) rotate(0);
+        }
+        100%{
+            transform: scale(0.9) rotate(1turn)
+        }
+    }
+</style>
+<body>
+    <ul>
+        <li><i class="fa fa-heart"></i></li>
+        <li><i class="fas fa-glass-martini"></i></li>
+        <li><i class="fas fa-globe"></i></li>
+        <li><i class="fas fa-gift"></i></li>
+
+
+    </ul>
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fontawesomepro/css/all.min.css">
+    <title>Animation</title>
+</head>
+<style>
+    body{
+        background-color: cornflowerblue;
+        height: 100vh;
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+
+        overflow: hidden;
+    }
+    .container{
+        width: 1000px;
+        display: flex;
+        justify-content: space-between;
+
+        position: relative;
+        animation: together 5s linear infinite;
+        animation-delay: 6s;
+    }
+    .boy,.girl{
+        position: relative;
+    }
+    .fas{
+        font-size: 200px;
+        
+        position: relative;
+
+        
+    }
+    #boy-lip{
+        font-size: 14px;
+        color: red;
+
+        position: absolute;
+        top: 30px;
+        left: 27px;
+
+        animation: boylip 6s linear;
+    }
+    #girl-lip{
+        font-size: 14px;
+        color: red;
+
+        position: absolute;
+        top: 30px;
+        left: 40px;
+
+        animation: girllip 3s linear;
+    }
+    .heart{
+        width: 500px;
+        height: 300px;
+
+        position: relative;
+
+        animation: myani 3s linear 2 alternate;
+
+        left: -35px;
+
+        
+    }
+    #fa-heart{
+       font-size: 50px;
+       color: red;
+       
+
+        position: absolute;
+        top: -23%;
+        left: 45%;
+
+        animation: ani 3s linear infinite;
+
+        
+    }
+    @keyframes myani{
+        0%{
+            transform: translate(-70%,30%);
+        }
+        25%{
+            transform: translate(-35%,15%);
+        }
+        50%{
+            transform: translate(0,10%);
+        }
+        75%{
+            transform: translate(35%,15%);
+            font-size: 70px;
+        }
+        100%{
+            transform: translate(65%,30%);
+        }
+    }
+    @keyframes ani{
+        0%{
+            font-size: 40px;
+        }
+        100%{
+            font-size: 100px;
+        }
+    }
+    @keyframes boylip{
+        0%{
+            opacity: 1;
+        }
+        10%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 0;
+        }
+    }
+    @keyframes girllip{
+        0%{
+            opacity: 0;
+        }
+        90%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+        }
+    }
+    @keyframes together{
+        0%{
+            width: 70%;
+        }
+        50%{
+            width: 13%;
+        }
+        100%{
+            width: 13%;
+        }
+    }
+
+    .fad{
+        font-size: 570px;
+
+        color: rgba(204, 19, 19, 0.685);
+
+        position: absolute;
+        top: 5%;
+        left: 31%;
+        z-index: -1;
+
+        animation: bg 11s infinite;
+
+    }
+    @keyframes bg{
+        0%{
+            opacity: 0;
+        }
+        70%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+        }
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="boy"><i class="fas fa-male"></i><i class="fas fa-lips" id="boy-lip"></i></div>
+
+        <div class="heart"><i class="fas fa-heart" id="fa-heart"></i></div>
+
+        <div class="girl"><i class="fas fa-female"></i><i class="fas fa-lips" id="girl-lip"></i></div>
+
+        
+
+    </div>
+    <div class="bg-heart"><i class="fad fa-heart"></i></div>
+
+    
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floating Text Animation Effect</title>
+</head>
+<style>
+    body{
+        height: 100vh;
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+
+        overflow: hidden;
+
+        background-color: teal;
+
+        text-align: center;
+    }
+    h1{
+        color: #fff;
+        font-size: 100px;
+        text-transform: uppercase;
+        text-shadow: 0 7px 5px rgba(0, 0, 0, 0.5);
+
+        animation: ani 2s linear infinite alternate;
+
+    }
+    @keyframes ani{
+        from{
+            transform: rotate(5deg);
+        }to{
+            transform: rotate(-5deg);
+        }
+    }
+</style>
+<body>
+    <h1>CSS <br> Animation <br> Project</h1>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+</head>
+<style type="text/css">
+
+    body{
+        height: 100vh;
+        display: flex;
+
+        font-family: sans-serif;
+
+        justify-content: center;
+        align-items: center;
+
+        text-align: center;
+
+        background-color: blue;
+
+        overflow: hidden;
+    }
+    h1{
+        font-size: 170px;
+        background-image: url(img/banner.png);
+        color: transparent;
+
+        -webkit-background-clip:text;
+
+        animation: ani 10s linear infinite;
+        
+    }
+    @keyframes ani{
+        from{
+            background-position: 0 0;
+        }
+        to{
+            background-position: 100% 0;
+        }
+    }
+</style>
+<body>
+    <h1>CSS <br> ANIMATION</h1>
+</body>
+</html>

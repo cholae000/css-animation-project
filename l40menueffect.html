@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Effect</title>
+</head>
+<style>
+    body{
+        background-color: #ff5;
+        display: flex;
+        height: 100vh;
+
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+    ul{
+        list-style: none;
+        display: flex;
+    }
+    a{
+        text-decoration: none;
+        text-transform: uppercase;
+        padding: 10px 15px;
+        color: #272727;
+        font-size: 22px;
+
+        margin-right: 12px;
+
+        position: relative;
+        transition: all 0.5s;
+        
+    }
+    a:hover{
+        
+        background-color: rgb(206, 61, 85);
+        color: #fff;
+    }
+    a::before{
+        content: '';
+        width: 15px;
+        height: 15px;
+        background-color:transparent;
+
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+
+        border-left: 3px solid rgb(206, 61, 85) ;
+        border-bottom:3px solid rgb(206, 61, 85);
+
+        transition: all 0.5s;
+        opacity: 0;
+    }
+    a::after{
+        content: '';
+        width: 15px;
+        height: 15px;
+        background-color:transparent;
+
+        position: absolute;
+        top: 0px;
+        right: 0px;
+
+        border-top: 3px solid rgb(206, 61, 85) ;
+        border-right:3px solid rgb(206, 61, 85);
+
+        transition: all 0.5s;
+        opacity: 0;
+    }
+    a:hover::after{
+        top: -7px;
+        right: -7px;
+        opacity: 1;
+       
+    }
+    a:hover::before{
+        bottom: -7px;
+        left: -7px;
+        opacity: 1;
+        
+    }
+</style>
+<body>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Service</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Effect</title>
+</head>
+<style>
+    body{
+        display: flex;
+        height: 100vh;
+
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+
+        background-color: #777;
+
+        text-align: center;
+    }
+    ul{
+        list-style: none;
+        padding: 0;
+        /* display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; */
+    }
+    
+    a{
+        height: 40px;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: #fff;
+        font-size: 20px;
+        padding: 5px 10px;
+        letter-spacing: 2px;
+
+        display: block;
+
+        margin-bottom: 5px;
+
+        overflow: hidden;
+
+        position: relative;
+    }
+    span{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    a::before{
+        content: '';
+        width: 100%;
+        height: 100%;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: teal;
+
+        transform: translateX(-120%);
+        transition: all 0.5s 0.3s;
+    }
+    a:hover::before{
+        transform: translateX(0);
+        z-index: -1;
+    }
+    .span1{
+        transition: all 0.5s;
+    }
+    a:hover .span1{
+        transform: translateY(-100%);
+    }
+    .span2{
+        transition: all 0.5s;
+    }
+    a:hover .span2{
+        transform: translateY(-100%);
+    }
+</style>
+<body>
+    <ul>
+        <li>
+           <a href="#">
+               <span class="span1">Home</span>
+               <span class="span2">Home</span>
+           </a>
+        </li>
+        <li>
+            <a href="#">
+                <span class="span1">About</span>
+                <span class="span2">About</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span class="span1">Services</span>
+                <span class="span2">Services</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span class="span1">Portfolio</span>
+                <span class="span2">Portfolio</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span class="span1">Contact</span>
+                <span class="span1">Contact</span>
+            </a>
+        </li>
+    </ul>
+</body>
+</html>

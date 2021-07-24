@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Effect</title>
+</head>
+<style>
+    body{
+        height: 100vh;
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+    .card{
+        width: 300px;
+        height: 400px;
+
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        background-color: black;
+        position: relative;
+
+        overflow: hidden;
+    }
+    .imgbox{
+        width: 100%;
+        height: 100%;
+    }
+    img{
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+
+        transition: all 0.5s;
+    }
+    .content{
+
+        width: 80%;
+        height: 100%;
+        text-align: center;
+        /* display: flex;
+        justify-self: center;
+        flex-direction: column; */
+
+        background-color: #fff;
+
+        position: absolute;
+        bottom: calc(-100% + 70px);
+        left: 10%;
+
+        transition: all 0.7s;
+    }
+    
+    h3{
+        font-size: 23px;
+        text-transform: uppercase;
+    }
+    p{
+        font-size: 18px;
+        margin: auto 30px;
+        opacity: 0;
+
+        transition: all 0.3s 0.8s;
+    }
+    a{
+        text-decoration: none;
+        color: #fff;
+        background-color: black;
+        padding: 10px 15px;
+
+        font-size: 15px;
+
+        margin-top: 15px;
+
+        display: inline-block;
+        opacity: 0;
+
+        transition: all 0.3s 1s;
+    }
+    .card:hover .content{
+        width: 100%;
+        bottom: 0;
+        left: 0;
+    }
+    .card:hover p{
+        opacity: 1;
+    }
+    .card:hover a{
+        opacity: 1;
+    }
+    .card:hover img{
+        opacity: 0;
+    }
+
+</style>
+<body>
+    <div class="card">
+        <div class="imgbox">
+            <img src="img/menu.jpg" alt="">
+        </div>
+        <div class="content">
+            <h3>Today Special</h3>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries
+            </p>
+            <a href="#">Read More</a>
+        </div>
+    </div>
+</body>
+</html>
